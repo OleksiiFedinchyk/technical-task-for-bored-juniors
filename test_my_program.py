@@ -20,11 +20,11 @@ def test_get_activity_without_command_line_arguments():
     wrapper = Wrapper()
     assert wrapper.get_activity() == "http://www.boredapi.com/api/activity/"
 
-"""to check this out I use value 10 for participants and this get request will respond 
+""" To check this out I use the value 10 for participants and this get request will respond
 {
   "error": "No activity found with the specified parameters"
 }
-and when try to get value from activity-key, program will raise KeyError
+    And when tries to get value from activity-key, the program will raise KeyError
 """
 def test_access_activity_value():
     with raises(KeyError):
