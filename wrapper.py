@@ -17,7 +17,7 @@ class Wrapper:
                              "maxaccessibility": self.maxaccessibility}
 
     def get_activity(self):
-        # Extract from "self.queries_dict" not None value. If all values equal None, get_activity method return random activity
+        # Extract from "self.queries_dict" not None value. If all values equal None, get_activity method returns random activity
         add = '&'.join(f"{querie}={self.queries_dict[querie]}" for querie in self.queries_dict if self.queries_dict[querie] != None )
         return f"http://www.boredapi.com/api/activity?{add}" if add else "http://www.boredapi.com/api/activity/"
 
